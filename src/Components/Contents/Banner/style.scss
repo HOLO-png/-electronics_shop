@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section {
+    position: relative;
+    width: auto;
+    height: 500px;
+    // transform: translateY(-30%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    border-top: 1px solid rgba(255, 255, 255,0.5);
+    border-bottom: 1px solid rgba(255, 255, 255,0.5);
+    & .circle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+        45deg
+        , #9a58ccc9, #d771e9c2);
+        clip-path: circle(600px at right 800px);
+    }
+    & .content {
+        position: relative;
+        max-width:100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transform: translateX(-1%);
+        &__textBox {
+            position: relative;
+            max-width:600px;
+            & h2 {
+                color: rgb(235, 233, 233);
+                font-size: 4em;
+                line-height: 1.5em;
+                font-weight: 500;
+                text-transform: uppercase;
+                text-shadow: 5px 2px 4px rgba(83, 36, 36, 0.632);
+                & span {
+                    font-size: 1.5em;
+                    text-shadow: 5px 2px 4px rgba(83, 36, 36, 0.632);
+                }
+            }
+            & p {
+                color: #fff;
+                text-shadow: 5px 2px 4px rgba(0, 0, 0, .2);
+            }
+            & a {
+                    display: inline-block;
+                    margin-top: 20px;
+                    padding: 8px 20px;
+                    color: rgb(106, 43, 43);
+                    border-radius: 40px;
+                    font-weight: 550;
+                    letter-spacing: 1px;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    position: relative;
+                    justify-content: center;
+                    align-items: center;
+                    border: 1px solid rgba(255, 255, 255, 0.4);
+                    border-right: 1px solid rgba(255, 255, 255, 0.2);
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                    background: rgba(255, 255, 255, 0.1);
+                    backdrop-filter: blur(4px);
+                    z-index: 1;
+                    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.5);
+                    overflow: hidden;
+                    transition: top 0.5s, z-index 0.5s , transform 0.5s;
+                    transition-delay: 0.5s, 0.5s, 0s;
+                    &:hover {
+                        transition-delay: 0s, 0.5s, 0.5s;
+                        z-index: 11;
+                    }
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width:50px;
+                        height: 100%;
+                        background: rgba(255, 255, 255, 0.5);
+                        transform: skew(45deg) translateX(250px);
+                        transition: 0.5s;
+                    }
+                    &:hover:before {
+                        transform:skew(45deg) translateX(-200px);
+                    }  
+            }
+        }
+        &__imgBox {
+            width: 600px;
+            display:flex;
+            justify-content: flex-end;
+            position: relative;
+            margin-left: 50px;
+            & img {
+                max-width: 600px;
+            }
+            &::after{
+                content: "";
+                background-color:rgb(112, 170, 251);
+                position: absolute;
+            }
+        }
+    }
+    & .thumb {
+        position: absolute;
+        left: 50%;
+        bottom: 20px;
+        transform: translateX(-50%);
+        display: flex;
+        & li {
+            list-style: none;
+            display: inline-block;
+            margin: 0 20px;
+            cursor: pointer;
+            transition: 0.5s;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            &:hover {
+                transform: translateY(-15px);
+            }
+            img {
+                max-width: 40px;
+            }
+        }
+    }
+    & .sci {
+        position: absolute;
+        top: 50%;
+        right:30px;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        & li {
+            list-style: none;
+            & a {
+            display: inline-block;
+            filter: invert(1);
+            margin: 5px 0;
+            transform: scale(0.6);
+            }
+        }
+        
+    }
+}
