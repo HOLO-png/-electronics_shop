@@ -6,7 +6,7 @@ class Products extends Component {
     return (
       <section className="product-card card-phuKien">
         <div className="title">
-          <span className="title-product">Những mẫu Phụ Kiện Bán Chạy:</span>
+          <span className="title-product">Những mẫu Phụ Kiện Bán Chạy</span>
           <div className="descrip">
             <img
               className="img-title-mobile"

@@ -7,9 +7,10 @@
 }
 img.img-title-mobile {
     position: absolute;
-    left: 40%;
-    transform: translateY(-70%);
+    left: 36%;
+    transform: translateY(-92%);
     z-index: 99;
+    width: 7%;
 }
 section.product-card {
     // display: flex;
@@ -82,7 +83,7 @@ section.product-card {
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%;
+        height: 55%;
         background-color: #ef3b36;
         clip-path: circle(65% at 100% -20%);
         }
